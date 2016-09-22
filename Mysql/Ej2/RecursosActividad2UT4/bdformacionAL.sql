@@ -38,7 +38,11 @@ CREATE TABLE IF NOT EXISTS `alumnoscursillosdj` (
 ALTER TABLE `alumnoscursillosdj` ADD PRIMARY KEY( `CODAL`, `CODCUR`);
 ALTER TABLE `alumnosdj` ADD PRIMARY KEY(`CODAL`);
 ALTER TABLE `cursillosdj` ADD PRIMARY KEY(`CODCUR`);
+
 ALTER TABLE `profesoresdj` ADD PRIMARY KEY(`CODP`);
+ALTER TABLE `profesoresdj` ADD FOREIGN KEY (`CODP`) REFERENCES `cursillosdj`.`CODP` ON DELETE CASCADE;
+
+
 
 --
 -- Volcado de datos para la tabla `cursillos`
