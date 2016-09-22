@@ -2,3 +2,8 @@ CREATE TABLE `curso`.`cursos` ( `idCurso` INT(3) NOT NULL AUTO_INCREMENT ,  `nom
 
 CREATE TABLE `curso`.`alumnosCursos` ( `idAlumno` INT(3) NOT NULL , `idCurso` INT(3) NOT NULL , PRIMARY KEY  (`idAlumno`, `idCurso`)) ENGINE = InnoDB;
 
+SELECT nombre, apellido
+FROM alumnos
+WHERE edad > 35
+ORDER BY apellido DESC
+

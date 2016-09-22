@@ -1,0 +1,32 @@
+16325102,Zigor,Tortola Esbort,1974/03/16,Encartaciones;18,Pamplona,945675608
+26325102,Marisa,Tortola Giokoetxea,1978/08/15,Pez;19,Buñuel,977068464
+36325102,Ohier,Giokoetxea Mendia,1986/08/31,Encartaciones;16,Pamplona,969090854
+46325102,Ohiana,Mendia Mantua,1993/01/30,Gral Malo;12,Pamplona,975922128
+56325102,Zigor,García Giokoetxea,1983/05/22,Libertad;6,Logroño,921477720
+66325102,Zigor,Mantua Giokoetxea,1989/11/15,Libertad;9,Pamplona,936662432
+76325102,Antonio,García Giokoetxea,1976/04/09,Larga;16,Buñuel,904847447
+86325102,Zigor,Giokoetxea Mantua,1965/11/19,Pez;15,Pamplona,953829111
+96325102,Felisa,García Giroto,1959/07/14,Milagro;18,Donostia,920865984
+10156329,Rogelia,Zarra García,1986/11/21,Mayor ;19,Pamplona,918726159
+11156329,Marta,Giokoetxea Esbort,1989/04/01,Milagro;5,Donostia,975513003
+12156329,Marta,Mendia García,1960/08/05,Corta;18,Estella,932273126
+13156329,Antonio,Tortola Garzon,1986/06/11,Gral Malo;1,Buñuel,907905633
+14156329,Ohiana,Garzon Mendia,1967/10/23,Corta;6,Madrid,981089531
+15156329,Marta,Gomez Tortola,1982/05/07,Nagusia;1,Pamplona,960054145
+16156329,Antonio,Tortola Giroto,1966/10/31,Larga;11,Madrid,974167308
+17156329,Antonio,Giroto Tortola,1987/08/10,Pez;14,Pamplona,916753682
+18156329,Eufrasio,Zarra Mantua,1961/03/18,Encartaciones;15,Pamplona,948557744
+19156329,Ander,Gomez Garzon,1978/06/25,Encartaciones;18,Pamplona,952153150
+20256314,Zigor,Esbort Giokoetxea,1970/05/24,Larga;22,Madrid,940492806
+21256314,Ander,García García,1985/05/13,Larga;12,Logroño,918793202
+22256314,Ohier,Giokoetxea Tortola,1989/01/25,Gral Malo;7,Pamplona,923370807
+23256314,Eufrasio,Esbort Tortola,1966/02/02,Zapatería;10,Pamplona,962130349
+24256314,Felisa,Garzon Garzon,1973/09/12,Milagro;13,Pamplona,901070821
+25256314,Marta,Tortola Giokoetxea,1988/11/23,Nagusia;13,Tudela,901324458
+26256314,Ohier,Giroto Gomez,1967/10/06,Corta;9,Donostia,908121413
+27256314,Felisa,Zarra Mendia,1990/01/29,Zapatería;14,Estella,984261500
+28256314,Antonio,Zarra Tortola,1967/12/03,Milagro;0,Pamplona,926319336
+29256314,Ohiana,Giokoetxea Giokoetxea,1961/10/24,Gral Malo;5,Donostia,903193349
+30256314,Ander,Mendia Zarra,1990/06/26,Milagro;1,Buñuel,935256568
+31256314,Antonio,Gomez García,1965/02/17,Pez;2,Logroño,952208509
+32256314,Felisa,Zarra Zarra,1967/08/05,Larga;6,Buñuel,926853546

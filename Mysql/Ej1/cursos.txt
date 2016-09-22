@@ -1,6 +1,5 @@
 1:XHTML y CSS:45
 2:PHP y MySQL:60
-3:Desarrollo de aplicaciones con
-Android:100
+3:Desarrollo de aplicaciones con Android:100
 4:Seguridad en PHP:75
 5:Joomla 1.6:30
