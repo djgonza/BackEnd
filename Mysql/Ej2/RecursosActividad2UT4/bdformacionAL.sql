@@ -42,6 +42,7 @@ ALTER TABLE `cursillosdj` ADD PRIMARY KEY(`CODCUR`);
 ALTER TABLE `profesoresdj` ADD PRIMARY KEY(`CODP`);
 ALTER TABLE `profesoresdj` ADD FOREIGN KEY (`CODP`) REFERENCES `cursillosdj`.`CODP` ON DELETE CASCADE;
 
+ALTER TABLE `cursillosdj` ADD  FOREIGN KEY (`CODP`) REFERENCES `bdformaciondj`.`profesoresdj`(`CODP`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
 --
