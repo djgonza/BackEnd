@@ -6,7 +6,7 @@
 
 		define("COSTE", 16);
 		$importe = 0;
-		$i = 1;
+		$i = 0;
 		while ($importe <= 250) {
 			
 			echo "<p>".$i." : ".$importe." </p>";

@@ -24,9 +24,7 @@ ORDER BY `FECHA` limit 0,3
 
 -- 5
 
-SELECT A.codal, A.nomal, A.diral, A.telfal, C.nomcur \n"
-    . "FROM (alumnoska A INNER JOIN alumnoscursilloska AC ON A.codal=AC.codal) INNER JOIN cursilloska C ON C.codcur=AC.codcur WHERE C.nomcur=\'STRETCHING\
-
+SELECT A.codal, A.nomal, A.diral, A.telfal, C.nomcur FROM (alumnoska A INNER JOIN alumnoscursilloska AC ON A.codal=AC.codal) INNER JOIN cursilloska C ON C.codcur=AC.codcur WHERE C.nomcur='STRETCHING'
 
 -- 6
 
@@ -59,8 +57,8 @@ BEGIN
 	
 	DECLARE fechaSalida varchar(50) default "Enero";
 	DECLARE mes int(2) default month(fecha);
-
-	/*CASE mes
+    
+    CASE mes
 		WHEN 01 THEN set fechaSalida = "Enero";
 		WHEN 02 THEN set fechaSalida = "Febrero";
 		WHEN 03 THEN set fechaSalida = "Marzo";
@@ -73,50 +71,43 @@ BEGIN
 		WHEN 10 THEN set fechaSalida = "Octubre";
 		WHEN 11 THEN set fechaSalida = "Noviembre";
 		WHEN 12 THEN set fechaSalida = "Diciembre";
-	END CASE;*/
-
-	fechaSalida = concat(fechaSalida, " de ", year(fecha));
-	return fechaSalida;
+	END CASE;
+    
+    return concat(fechaSalida, " de ", year(fecha));
 
 END
 $$
 DELIMITER ;
 
+SELECT conletrasdj("2016-12-18")
+
 -- 9
-DROP VIEW IF EXISTS viewProfesoreska;
-CREATE VIEW viewProfesoreska AS
-SELECT P.nomp as Profesor,conLetraska(P.feccontrato)as Contrato, COUNT(AC.codal) as NumeroAlumnos FROM (cursilloska C INNER JOIN alumnoscursilloska AC ON C.codcur=AC.codcur)INNER JOIN profesoreska P ON C.codp=P.codP GROUP BY P.nomp,P.feccontrato;
 
-      		select * FROM viewprofesoreska
+DROP VIEW IF EXISTS viewProfesoresdj;
+CREATE VIEW viewProfesoresdj AS
+SELECT 
+	P.nomp as Profesor, 
+	conLetrasdj(P.feccontrato) as Contrato, 
+	COUNT(AC.codal) as NumeroAlumnos 
+FROM (cursillosdj C LEFT JOIN alumnoscursillosdj AC ON C.codcur = AC.codcur) 
+LEFT JOIN profesoresdj P ON C.codp = P.codP GROUP BY P.nomp, P.feccontrato;
 
+select * FROM viewprofesoresdj
 
-      		-- 10
-      		DELIMITER $$
-DROP PROCEDURE IF EXISTS notaMediaka $$
-CREATE PROCEDURE notaMediaka (IN nombre varchar(25) )
+-- 10
+
+DELIMITER $$
+DROP PROCEDURE IF EXISTS notaMediadj $$
+CREATE PROCEDURE notaMediadj (IN nombre varchar(25), OUT notaSalida float)
 BEGIN
-    SELECT C.nomcur as CURSILLO, AVG(CA.notal) as MEDIA
-	FROM cursilloska C INNER JOIN alumnoscursilloska CA ON C.codcur = CA.codcur
+
+    set notaSalida = Select AVG(AC.notal) as MEDIA 
+	FROM cursillosdj C INNER JOIN alumnoscursillosdj AC ON C.codcur = AC.codcur
 	WHERE C.nomcur = nombre;
+
 END $$
 DELIMITER $$
 
-
-call notaMediaka("PATINAJE")
-
-Con parámetro de salida:
-
-DELIMITER $$
-DROP PROCEDURE IF EXISTS notaMediaka $$
-CREATE PROCEDURE notaMediaka (IN nombre varchar(25), OUT media float )
-BEGIN
-    SELECT C.nomcur as CURSILLO, AVG(CA.notal) INTO media
-	FROM cursilloska C INNER JOIN alumnoscursilloska CA ON C.codcur = CA.codcur
-	WHERE C.nomcur = nombre;
-END $$
-DELIMITER $$
-
-Para probar, en dos líneas:
-
-call notaMediaka("PATINAJE",@media);
-SELECT @media;
+set @prueba = 0;
+call notaMediadj("PATINAJE", @prueba);
+select @prueba;

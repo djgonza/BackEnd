@@ -145,3 +145,10 @@ br {
     width: 15em;
 }
 
+tr:nth-child(odd) {
+    background-color: #ccc;
+}
+
+tr {
+    background-color: #f51111;
+}
