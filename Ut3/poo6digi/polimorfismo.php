@@ -3,7 +3,7 @@ abstract class Vehiculo{
  
     protected $nafta = 100; //Comienza con 100 litros de nafta
  
-    public function  getNafta(){
+    private function  getNafta(){
 	return $this->nafta;
     }
     abstract function avanzar();
@@ -12,14 +12,14 @@ abstract class Vehiculo{
  
 class Ferrari extends Vehiculo{
  
-    public function avanzar(){
+    private function avanzar(){
         $this->nafta -= 20;
     }
 }
  
 class Fiat extends Vehiculo{
  
-    public function avanzar(){
+    private function avanzar(){
         $this->nafta -= 8;
     }
 }
@@ -37,10 +37,10 @@ class Prueba {
 $coche1=new Fiat();
 $coche2=new Ferrari();
 
-Prueba::probar($coche1); // ::por ser un método estático
+Prueba::probar($coche1); // ::por ser un mï¿½todo estï¿½tico
 Prueba::probar($coche2);
 
-// llamar a un método 
+// llamar a un mï¿½todo 
 echo "Al Fiat del usuario 1 le quedan " . $coche1->getNafta() . " litros de nafta<br/>";
 
 echo "Al Ferrari del usuario 2 le quedan " . $coche2->getNafta() . " litros de nafta<br/>";
@@ -68,11 +68,11 @@ echo "Al Ferrari del usuario 2 le quedan " . $coche2->getNafta() . " litros de n
 //	$this->vehiculo = $objeto;
 //    }
 // 
-//    public function avanzarVehiculo(){
+//    private function avanzarVehiculo(){
 //	$this->vehiculo->avanzar();
 //    }
 // 
-//    public function nafta(){
+//    private function nafta(){
 //	return $this->vehiculo->getNafta();
 //    }
 //}

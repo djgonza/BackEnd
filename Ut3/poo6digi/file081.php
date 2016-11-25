@@ -1,5 +1,5 @@
 <?php
-echo "Acceso a una variable miembro estática  (ejemplo file081.php)<br /><br /><br />";
+echo "Acceso a una variable miembro estï¿½tica  (ejemplo file081.php)<br /><br /><br />";
 
 // Clase
 class MiClase {
@@ -9,11 +9,11 @@ class MiClase {
 // se usa sin crear la instancia de la clase
 // Tiene un valor inicial igual a 6	
 // sintaxis clase::variable
-echo MiClase::$var ."<BR>";
+Print MiClase::$var ."<BR>";
 
-// se modifica la variable de clase estática
+// se modifica la variable de clase estï¿½tica
 MiClase::$var = 7; 
  
-echo MiClase::$var ."<BR>";
+Print MiClase::$var ."<BR>";
  
 ?>

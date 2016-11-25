@@ -1,25 +1,25 @@
 <?php
-echo "Simulación de sobrecarga de métodos (ejemplo file095.php)<br /><br /><br /";
+echo "Simulaciï¿½n de sobrecarga de mï¿½todos (ejemplo file095.php)<br /><br /><br /";
 
-// Definición de la clase Prueba
+// Definiciï¿½n de la clase Prueba
 class Prueba {
-    public $resultado;
+    private $resultado;
 
 	function __call($met, $var){
-		// en el parámetro $met se recibe el nombre del método
-		//  en el parámetro $var se recibe una matriz con los
-		// parámetros utilizados en la llamada al método 
+		// en el parï¿½metro $met se recibe el nombre del mï¿½todo
+		//  en el parï¿½metro $var se recibe una matriz con los
+		// parï¿½metros utilizados en la llamada al mï¿½todo 
 
 		if ($met == "test") {
-		// aqui incluimos una lógica para gestionar la
+		// aquï¿½ incluimos una lï¿½gica para gestionar la
 		// sobrecarga
 		
 			// si la variable es integer se llama
-			// a la función test para numéricos
+			// a la funciï¿½n test para numï¿½ricos
 			if (gettype($var[0]) == "integer"){
-				$this->test_numérico($var);
+				$this->test_numerico($var);
 			}
-			// caso contrario, se llama a la función
+			// caso contrario, se llama a la funciï¿½n
 			// test para cadenas
 			else {
 				$this->test_cadena($var);
@@ -27,36 +27,36 @@ class Prueba {
 		} 
 	}
 
-	// función privada para tratar parámetro integer
-	private function test_numérico($var){
+	// funciï¿½n privada para tratar parï¿½metro integer
+	private function test_numerico($var){
 	    $this->resultado = $var[0] * 5;
 	}
 
-	// función privada para tratar parámetro cadena
+	// funciï¿½n privada para tratar parï¿½metro cadena
 	private function test_cadena($var){
 	    $this->resultado = $var[0] . " es texto";
 	}   
 }	
 $a = new Prueba;
 
-// la sobrecarga de métodos significa llamar a un mismo método
-// pero con distintos tipos de parámetros o con distinta
-// cantidad de parámetros
+// la sobrecarga de mï¿½todos significa llamar a un mismo mï¿½todo
+// pero con distintos tipos de parï¿½metros o con distinta
+// cantidad de parï¿½metros
 
-// Aqui siempre se llama al método Test
-// el método en realidad no existe, pero en la clase
-// está definido el método __call que recibe las llamadas a
-// métodos no existentes, 
-// alli podremos colocar la lógica necesaria para simular
-// la sobrecarga de métodos
+// Aquï¿½ siempre se llama al mï¿½todo Test
+// el mï¿½todo en realidad no existe, pero en la clase
+// estï¿½ definido el mï¿½todo __call que recibe las llamadas a
+// mï¿½todos no existentes, 
+// allï¿½ podremos colocar la lï¿½gica necesaria para simular
+// la sobrecarga de mï¿½todos
 
-$a->test(8);  // se usa el método test con números
+$a->test(8);  // se usa el mï¿½todo test con nï¿½meros
 
-echo "Método test: proceso con argumento numérico: " . 
+echo "Mï¿½todo test: proceso con argumento numï¿½rico: " . 
    $a->resultado . "<BR>"; 
 
-$a->test("Esto "); // se usa el método test con cadenas
+$a->test("Esto "); // se usa el mï¿½todo test con cadenas
 
-echo "Método test: proceso con argumento de cadena: " . 
+echo "Mï¿½todo test: proceso con argumento de cadena: " . 
    $a->resultado . "<BR>"; 
 ?>

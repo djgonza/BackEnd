@@ -1,11 +1,11 @@
 <?php
-echo "Clonación de objetos (ejemplo file097.php)<br /><br /><br />";
+echo "Clonaciï¿½n de objetos (ejemplo file097.php)<br /><br /><br />";
 
-// Definición de la clase Prueba
+// Definiciï¿½n de la clase Prueba
 class Prueba {
  	static $contador = 0;
 
-	function Prueba() {
+	function __construct() {
 	        echo "<BR>entra a construct: " . self::$contador . "<BR>";
                 self::$contador++;
 	}
@@ -14,7 +14,7 @@ class Prueba {
 		echo "<BR>entra a clone: " . self::$contador ."<BR>";
                 self::$contador++;
 	 	$this->cliente = "nuevo cliente";
-		$this->dirección = "nueva dirección";
+		$this->direccion = "nueva direccion";
 	}
 	  
 }	
@@ -23,13 +23,13 @@ class Prueba {
 $objPrueba = new Prueba;
 
 $objPrueba->cliente = "cliente original";
-$objPrueba->dirección = "dirección original";
+$objPrueba->direccion = "direcciï¿½n original";
 echo "Objeto original<BR>";
 
 // el objeto original
 echo "Contador " . Prueba::$contador . "<BR>";
 echo $objPrueba->cliente . "<BR>"; 
-echo $objPrueba->dirección . "<BR>"; 
+echo $objPrueba->direccion . "<BR>"; 
 
 $CloPrueba = clone $objPrueba;
 echo "<BR>Objeto clonado<BR>";
@@ -37,5 +37,5 @@ echo "<BR>Objeto clonado<BR>";
 // el objeto clonado
 echo "Contador " . Prueba::$contador . "<BR>";
 echo $CloPrueba->cliente . "<BR>"; 
-echo $CloPrueba->dirección . "<BR>"; 
+echo $CloPrueba->direccion . "<BR>"; 
 ?>

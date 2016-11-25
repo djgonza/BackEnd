@@ -1,19 +1,19 @@
 <?php
-print "__autoload() (ejemplo file106.php)<br /><br /><br />";
+echo "__autoload() (ejemplo file106.php)<br /><br /><br />";
 
-// Éste es un modo de hacerlo sin __autoload()
+// ï¿½ste es un modo de hacerlo sin __autoload()
 //include_once "Personas.php";
 
 function __autoload($varClase) {
-	// con este print veremos cuántas veces se invoca a la 
-   // función autoload()
-	// Será sólo una vez, porque el archivo Personas.php contiene la
-	// declaración de las dos clases del programa
+	// con este echo veremos cuï¿½ntas veces se invoca a la 
+   // funciï¿½n autoload()
+	// Serï¿½ sï¿½lo una vez, porque el archivo Personas.php contiene la
+	// declaraciï¿½n de las dos clases del programa
 
-	print "<BR>** Entró a la función __autoload()**<BR><BR>";
+	echo "<BR>** Entrï¿½ a la funciï¿½n __autoload()**<BR><BR>";
 
-	// la lógica dentro de la función __autoload() es libre
-	// lo habitual es incluir la definición de la clase faltante
+	// la lï¿½gica dentro de la funciï¿½n __autoload() es libre
+	// lo habitual es incluir la definiciï¿½n de la clase faltante
 
 	if ($varClase == "Empleado" or $varClase == "Persona") {
 		include_once "Personas.php";
@@ -23,21 +23,21 @@ function __autoload($varClase) {
 	}	 
 }
 
-// la clase Persona no está declarada dentro de la 
+// la clase Persona no estï¿½ declarada dentro de la 
 // secuencia de comandos vigente en lugar de producirse un error, 
-// la unción __autoload lo intercepta
-// y se ejecuta. El parámetro que recibe la función es el nombre 
-// de la clase que no está definida en el script
+// la unciï¿½n __autoload lo intercepta
+// y se ejecuta. El parï¿½metro que recibe la funciï¿½n es el nombre 
+// de la clase que no estï¿½ definida en el script
 
-$obj = new Persona(122,"José Pérez");
+$obj = new Persona(122,"Josï¿½ Pï¿½rez");
 $obj->listar();
 
-// como la clase Empleado está definida dentro del archivo 
+// como la clase Empleado estï¿½ definida dentro del archivo 
 // Personas.php cuando se hace referencia a la clase Empleado, 
 // PHP detecta que la clase ya 
-// está definida, ya que se cargó junto con la clase Persona
+// estï¿½ definida, ya que se cargï¿½ junto con la clase Persona
 
-$obj = new Empleado(99123,"Juan Fernández","Recursos humanos");
+$obj = new Empleado(99123,"Juan Fernï¿½ndez","Recursos humanos");
 $obj->listar();
 
 ?>

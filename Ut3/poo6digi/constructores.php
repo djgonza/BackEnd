@@ -1,36 +1,36 @@
 <?php
 echo "Constructores <br /><br /><br />";
 
-// Definición de la clase ClaseBase
+// Definiciï¿½n de la clase ClaseBase
 class ClaseBase {
 	// constructor de la clase ClaseBase 
-	// Este constructor se ejecuta sólo en dos casos:
+	// Este constructor se ejecuta sï¿½lo en dos casos:
 	// cuando se crea un objeto de la clase ClaseBase
-	// o cuando se llama explícitamente desde una clase hija
+	// o cuando se llama explï¿½citamente desde una clase hija
 	// con la sintaxis parent::__construct()
 
-	function ClaseBase() {
-	    echo "Éste es el constructor de la clase " .
+	function __construct() {
+	    echo "Este es el constructor de la clase " .
         " base ClaseBase<BR>";
 	}
 }	
 
-// Definición de la clase ClaseHija1
+// Definiciï¿½n de la clase ClaseHija1
 class ClaseHija1 extends ClaseBase {
  	
 	// constructor de la clase ClaseHija1
 	// Este constructor se ejecuta cuando se crea 
 	// un objeto de la clase ClaseHija1
 
-	function ClaseHija1() {
-	    echo "Éste es el constructor de la clase hija " . 
+	function __construct() {
+	    echo "Este es el constructor de la clase hija " . 
          " ClaseHija1<BR>";
-		// aquí se podría llamar explícitamente 
+		// aquï¿½ se podrï¿½a llamar explï¿½citamente 
         // al constructor de la clase base
 	}
 }	
 
-// Definición de la clase ClaseHija2
+// Definiciï¿½n de la clase ClaseHija2
 class ClaseHija2 extends ClaseBase {
  	
 	// constructor de la clase ClaseHija2 
@@ -38,15 +38,15 @@ class ClaseHija2 extends ClaseBase {
    // referencia al constructor, es decir, se usa el nombre de 
    // la propia clase esto es igual a haber codificado lo siguiente:
 	// function __construct(){ 
-	// se recomienda utilizar el nombre de método __construct()
+	// se recomienda utilizar el nombre de mï¿½todo __construct()
  
 	function ClaseHija2() {
-	    echo "Éste es el constructor de la clase hija " . 
+	    echo "Este es el constructor de la clase hija " . 
          " ClaseHija2<BR>";
 
-		// aquí se llama explìcitamente al constructor 
+		// aquï¿½ se llama explï¿½citamente al constructor 
         // de la clase base 
-		parent::ClaseBase();
+		parent::__construct();
 	}
 }	
 

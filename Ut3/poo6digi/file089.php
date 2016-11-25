@@ -1,12 +1,12 @@
 <?php
 echo "Interfaces (ejemplo file089.php)<br /><br /><br />";
 
-// Definición de la clase Persona
+// Definiciï¿½n de la clase Persona
 class Persona {
-	// Identificación de la persona
-	public $dni;
-	public $nombre;
-	function Persona($var_dni, $var_nombre) {
+	// Identificaciï¿½n de la persona
+	private $dni;
+	private $nombre;
+	function __construct($var_dni, $var_nombre) {
 	    $this->dni = $var_dni;
 		$this->nombre = $var_nombre;
 	}
@@ -17,31 +17,31 @@ class Persona {
 
 class Empleado extends Persona implements Imprimir  {
 	//   
-	public $departamento;
+	private $departamento;
 
-	function Empleado($var_departamento, $var_dni, $var_nombre) {
+	function __construct($var_departamento, $var_dni, $var_nombre) {
 	    $this->departamento = $var_departamento;
 		parent::__construct($var_dni, $var_nombre);
 	}
 
-	// esta función se debe implementar obligatoriamente
+	// esta funciï¿½n se debe implementar obligatoriamente
 	// porque la clase Empleado implementa la interfaz Imprimir
 
 	function imprimir(){
 		echo "Empleado " . ($this->nombre) . "<BR><BR>";
 	}
 }	
-// La clase que implemente la interfaz Imprimir deberá forzosamente
-// implementar la función imprimir
+// La clase que implemente la interfaz Imprimir deberï¿½ forzosamente
+// implementar la funciï¿½n imprimir
 
 Interface Imprimir {
 	function imprimir();
 }
  
 // Se crea un objeto Empleado
-$emp = new Empleado("Contabilidad","44423899","José Pérez");
+$emp = new Empleado("Contabilidad","44423899","Josï¿½ Pï¿½rez");
 
-// se usa el método de la clase Empleado
+// se usa el mï¿½todo de la clase Empleado
 $emp->imprimir();
 
 // el objeto $emp es de tipo Empleado, Persona e Imprimir
@@ -50,11 +50,11 @@ if ($emp instanceof Empleado) {
 	echo "El objeto \$emp es de tipo Empleado.<BR>";}
 
 if ($emp instanceof Persona) {
-	echo "pero también es de tipo Persona (por derivar de " .
+	echo "pero tambiï¿½n es de tipo Persona (por derivar de " .
      "esta clase).<BR>";}
 
 if ($emp instanceof Imprimir) {
-	echo "Y también es de tipo Imprimir (por implementar " . 
+	echo "Y tambiï¿½n es de tipo Imprimir (por implementar " . 
      "esta interfaz).<BR>";}
  
 ?>

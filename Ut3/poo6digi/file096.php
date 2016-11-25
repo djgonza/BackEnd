@@ -1,29 +1,28 @@
 <?php
-echo "Simulación de sobrecarga de acceso a propiedades (ejemplo file096.php)<br /><br /><br />";
+echo "Simulaciï¿½n de sobrecarga de acceso a propiedades (ejemplo file096.php)<br /><br /><br />";
 
-// Definición de la clase Prueba
+// Definiciï¿½n de la clase Prueba
 class Prueba {
  	private $matriz;
 
-	// en el constructor se crea la matriz con un único elemento
-	function Prueba() {
+	// en el constructor se crea la matriz con un ï¿½nico elemento
+	function __construct() {
 		$this->matriz = array("Italia"=>100);
 	}
 
-	// cuando se accede a una propiedad que no existe, actúa
-	// el método __get(), en el argumento se recibe el nombre de la
+	// cuando se accede a una propiedad que no existe, actï¿½a
+	// el mï¿½todo __get(), en el argumento se recibe el nombre de la
 	// supuesta propiedad
 	
-	// aqui implementamos la función para que reciba los valores de
+	// aquï¿½ implementamos la funciï¿½n para que reciba los valores de
 	// claves de una matriz asociativa
-	// éste es sólo un ejemplo para la aplicación de métodos __get()
+	// ï¿½ste es sï¿½lo un ejemplo para la aplicaciï¿½n de mï¿½todos __get()
 	// y __set()
 
 		function __get($nv){
-		echo "<BR>fun
-		ción get:" . $nv ."<BR>";
+		echo "<BR>funciï¿½n get:" . $nv ."<BR>";
 
-		// la función isset() verifica si la variable está asignada
+		// la funciï¿½n isset() verifica si la variable estï¿½ asignada
 		if (isset($this->matriz[$nv]) ) {
 			return $this->matriz[$nv];
 		}
@@ -33,71 +32,71 @@ class Prueba {
 	}
 
 	// cuando se asigna un valor a una propiedad que no existe,
-   // actúa el método __set(), en el argumento se recibe el 
+   // actï¿½a el mï¿½todo __set(), en el argumento se recibe el 
    // nombre de la supuesta propiedad y el valor que se quiere 
    // asignar
 
 	function __set($nv,$val){
-		echo "<BR>función set:" . $nv . ", " . $val ."<BR>";
+		echo "<BR>funciï¿½n set:" . $nv . ", " . $val ."<BR>";
 		$this->matriz[$nv] = $val;
 	}
         
         // ejemplo de _isset()
 	function __isset($nv){
-		echo "<BR>función _isset:" . $nv . "<BR>";
+		echo "<BR>funciï¿½n _isset:" . $nv . "<BR>";
 		return isset($this->matriz[$nv]);
 
 	}
 
 	// ejemplo de _unset()
 	function __unset($nv){
-		echo "<BR>función _unset:" . $nv . "<BR>";
+		echo "<BR>funciï¿½n _unset:" . $nv . "<BR>";
 		unset($this->matriz[$nv]);
 
 	}
 }	
 
 // al generar el ejemplar de la clase Prueba
-// se ejecuta automáticamente el constructor de la clase
+// se ejecuta automï¿½ticamente el constructor de la clase
 // __construct() 
 
 $objPrueba = new Prueba;
 
-// la matriz sólo tiene el elemento de clave Italia, por lo que
-// España no existe
-if (!$objPrueba->España) {
+// la matriz sï¿½lo tiene el elemento de clave Italia, por lo que
+// Espaï¿½a no existe
+if (!$objPrueba->EspaÃ±a) {
 	echo "el elemento no existe en la matriz.<BR> ";
 }
 
-// si intentamos obtener el valor de la pseudopropiedad España
-// obtenemos False, porque aún no le asignamos valor
+// si intentamos obtener el valor de la pseudopropiedad Espaï¿½a
+// obtenemos False, porque aï¿½n no le asignamos valor
 
-$b = $objPrueba->España;
+$b = $objPrueba->EspaÃ±a;
 echo "Retorno es :" . $b . "<BR>";
 
-// Ahora se asigna el valor a la pseudo propiedad España,
-// gracias a la implementación del método __set(), el valor
-// se almacena en la propiedad matriz, en la clave España
+// Ahora se asigna el valor a la pseudo propiedad Espaï¿½a,
+// gracias a la implementaciï¿½n del mï¿½todo __set(), el valor
+// se almacena en la propiedad matriz, en la clave Espaï¿½a
 
-$objPrueba->España = 150; 
+$objPrueba->EspaÃ±a = 150; 
 
 // Al acceder ahora a la pseudo propiedad, obtenemos el valor
-// desde el método __get()
+// desde el mï¿½todo __get()
 
-$b = $objPrueba->España;
+$b = $objPrueba->EspaÃ±a;
 echo "Retorno es :" . $b . "<BR>";
 
-if ($objPrueba->España) {
+if ($objPrueba->EspaÃ±a) {
 	echo "El elemento existe en la matriz.<BR> ";
 }
 
 // creamos otro elemento
 $objPrueba->Argentina = 200;
 
-// se usa la función isset() con una propiedad no existente
-// esperando que la función _isset() haga su trabajo
+// se usa la funciï¿½n isset() con una propiedad no existente
+// esperando que la funciï¿½n _isset() haga su trabajo
 if (isset($objPrueba->Argentina)) {
-	echo "El elemento está en la matriz.<BR> ";
+	echo "El elemento estï¿½ en la matriz.<BR> ";
 }
 
 unset($objPrueba->Argentina);

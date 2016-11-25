@@ -1,35 +1,35 @@
 <?php
-echo "Comprobación de tipos (ejemplo file090.php)<br /><br /><br />";
+echo "Comprobaciï¿½n de tipos (ejemplo file090.php)<br /><br /><br />";
 
-// Definición de la clase Factura
+// Definiciï¿½n de la clase Factura
 class Factura {
-	// Número de la factura
-	public $número;
-	public $fecha;
+	// Nï¿½mero de la factura
+	private $numero;
+	private $fecha;
 
-	// matriz de objetos líneas de detalle (Línea_Detalle)
-	public $líneas;
-	function Factura($var_número, $var_fecha) {
-	    $this->número = $var_número;
+	// matriz de objetos lï¿½neas de detalle (Lï¿½nea_Detalle)
+	private $lineas;
+	function __construct($var_numero, $var_fecha) {
+	    $this->numero = $var_numero;
 		$this->fecha = $var_fecha;
 	}
-	function agregar_línea($línea_detalle) {
-	   	$this->líneas[] = $línea_detalle;
+	function agregar_linea($linea_detalle) {
+	   	$this->lineas[] = $linea_detalle;
 	}
-	function obtener_líneas() {
-		return ($this->líneas);
+	function obtener_lineas() {
+		return ($this->lineas);
 	}
 }
 	
-// Definición de la clase Línea_Detalle
+// Definiciï¿½n de la clase Lï¿½nea_Detalle
 
 class Linea_Detalle {
-	// Una propiedad publica
-	public $cantidad;
-    public $producto;
+	// Una propiedad privatea
+	private $cantidad;
+        	private $producto;
 
-	function Linea_Detalle($var_cantidad, $var_producto) {
-		// constructor de la clase Línea_Detalle
+	function __construct($var_cantidad, $var_producto) {
+		// constructor de la clase Lï¿½nea_Detalle
 	    $this->cantidad = $var_cantidad;
 		$this->producto = $var_producto;
 	}
@@ -38,19 +38,19 @@ class Linea_Detalle {
 // Se crea un objeto Factura
 $fac = new Factura("21001","20/04/2004");
 
-// se crea un objeto línea de detalle
-$lin = new Línea_Detalle(6,"peras");
+// se crea un objeto lï¿½nea de detalle
+$lin = new Linea_Detalle(6,"peras");
 
-// se agrega la línea a la factura
-$fac->agregar_línea($lin); //se envía un objeto Línea_Detalle
+// se agrega la lï¿½nea a la factura
+$fac->agregar_linea($lin); //se envï¿½a un objeto Lï¿½nea_Detalle
 
-// se crea otra línea de detalle
-$lin = new Línea_Detalle(12,"manzanas");
-$fac->agregar_línea($lin); // se envía un objeto Línea_Detalle
+// se crea otra lï¿½nea de detalle
+$lin = new Linea_Detalle(12,"manzanas");
+$fac->agregar_linea($lin); // se envï¿½a un objeto Lï¿½nea_Detalle
 
-// obtención de todas las líneas de factura
-echo "<U><B>contenido de las líneas de detalle </U></B><BR>";
-foreach (($fac->obtener_líneas()) as $value){ 
+// obtenciï¿½n de todas las lï¿½neas de factura
+echo "<U><B>contenido de las lï¿½neas de detalle </U></B><BR>";
+foreach (($fac->obtener_lineas()) as $value){ 
 	echo  ("cantidad: " . $value->cantidad . " unidades -  " . 
      " producto: " .$value->producto . "<BR>");
 }	

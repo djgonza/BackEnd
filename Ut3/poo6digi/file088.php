@@ -1,40 +1,37 @@
 <?php
-echo "Método final  (ejemplo file088.php)<br /><br /><br />";
+echo "Mï¿½todo final  (ejemplo file088.php)<br /><br /><br />";
 
-// Clase con un método final 
+// Clase con un mï¿½todo final 
 // sirve para indicar que no puede ser reemplazado 
   
 class MiClase {
-	public $saludo;
+	private $saludo;
 	final function saludar() {
 		echo $this->saludo ."<BR>";
 	} 
 }	
 // Subclase o clase derivada
 
-//Pero no se puede implementar un método definido como final
+//Pero no se puede implementar un mï¿½todo definido como final
 
 class MiSubClase extends MiClase {
-	public $despedida;
-	// la definición de este método produce un error fatal
+	private $despedida;
+	// la definiciï¿½n de este mï¿½todo produce un error fatal
 	function saludar() {
 		echo $this->saludo ."<BR>";
 	} 
 	function despedirse() {
 		echo $this->despedida ."<BR>";
 	}
-	function getDespedida() {
-		return $this->despedida;
-	}
 }
 
 // se crea un objeto de clase MiSubClase
 // una clase derivada de la clase MiClase
-// la que tiene un método final  
+// la que tiene un mï¿½todo final  
  
 $obj = new MiSubClase();
 
-$obj->saludo = "Hola, ¿cómo estamos?<BR><BR>";
+$obj->saludo = "Hola, Como estamos?<BR><BR>";
  
 $obj->saludar();
 
