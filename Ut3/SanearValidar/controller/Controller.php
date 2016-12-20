@@ -25,13 +25,13 @@ class Controller {
 
 		$validacion = new ValidadorForm();
 
-		if (!$validacion->validar()){
-
+		if (!$validacion->validar($validacion->parseData($_POST), $validacion->reglasValidacion)){
+			
 			$this->mostrarForm ($validacion->getErrores(), false);
 
 		}else{
 
-			$this->mostrarForm (null, false);
+			$this->mostrarForm (null, true);
 
 		}
 

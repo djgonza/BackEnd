@@ -57,6 +57,7 @@
 		$resultado = "<div>";
 
 		$resultado .= "<p>Nombre: ".$_POST['Nombre']." ".$_POST['Apellido']."</p>";
+		$resultado .= "<p>Edad: ".$_POST["Edad"]."</p>";
 		$resultado .= "<p>Módulo: ".$_POST['Modulo']."</p>";
 		$resultado .= "<p>Nota: ".$_POST['Nota']."</p>";
 

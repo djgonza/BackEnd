@@ -3,7 +3,7 @@
 class ValidadorForm {
 
 	private $errores = array();
-	private $reglasValidacion = null;
+	public $reglasValidacion = null;
 	private $valido = true;
 
 	public function ValidadorForm (){		
@@ -27,18 +27,38 @@ class ValidadorForm {
 
 	}
 
-	public function validar() {
+	public function validar($datos, $reglas) {
 
-		foreach ($this->reglasValidacion as $key => $value) {
+		foreach ($reglas as $key => $value) {
 			
-			if ((!isset($_POST[$key]) || $_POST[$key] == "") && $value["required"] == true){
-				$this->errores[] = "El campo ".$key." es requerido";
+			if ($datos[$key] == "" && $value["required"] == true){
+
+				$this->addError($key, "El campo ".$key." es requerido");
 				$this->valido = false;
+
+			}else if (isset($value["min"]) && $datos[$key] < $value["min"]) {
+
+				$this->addError($key, "El valor de ".$key." no es correcto ");
+				$this->valido = false;
+				
 			}
+
 
 		}
 
 		return $this->valido;
+
+	}
+
+	public function parseData ($data) {
+
+		foreach ($data as $key => $value) {
+
+			$value = htmlspecialchars($value);
+
+		}
+
+		return $data;
 
 	}
 
