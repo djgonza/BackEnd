@@ -1,16 +1,52 @@
 body{
-    font-family: Helvetica;
+	font-family: Helvetica;
 }
 
 h1{
-    padding: 0.5em;
-    text-align: center;
+	padding: 0.5em;
+	text-align: center;
 }
 
-legend, label{
-	
+form {
+	padding: 1em;
+    margin: 1em;
+    box-shadow: 0.3em 0.3em 2em #ccc;
 }
 
-label, input[type="text"]{
-    float: left;
+legend {
+	font-size: 1.5em;
+	text-decoration: underline;
+	margin-bottom: 1em;
 }
+
+label {
+	width: 45%;
+	float: left;
+	text-align: right;
+}
+
+input[type=text], input[type="radio"], select, div {
+	width: 45%;
+	float: right;
+}
+
+input[type=submit] {
+	clear: both;
+	width: 20%;
+	margin: 1.5em 40%;
+}
+
+p {
+	margin: 1em;
+	padding: 0.5em;
+	border: 1px solid red;
+	background-color: orange;
+	color: #b10000;
+	box-shadow: 0.3em 0.3em 2em #ccc;
+}
+
+
+
+
+
+

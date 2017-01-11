@@ -1,12 +1,9 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
-        <title>Formulario</title>
-        <meta chasert="UTF-8" />
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
-    </head>
-    <body>
-        <h1>Formulario - DATOS DE UN ALUMNO</h1>
-    
-       
-
+<!DOCTYPE html>
+	<html lang="es">
+	<head>
+		<title>Formulario</title>
+		<meta chasert="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<h1>Formulario - Datos Alumno</h1>

@@ -61,7 +61,7 @@ class Controlador{
     }
 
     function registrar(){
-
+        
         $this->dao = new DaoApWeb();
         $datos = array('nombre' => $_POST['nombre'], 'apellido' => $_POST['apellido'], 'dni' => $_POST['dni'], 'edad' => $_POST['edad'],
             'modulo' => $_POST['modulo'], 'nota' => $_POST['nota'], 'curso' => $_POST['curso'], 'idiomas' => $_POST['idiomas']);
