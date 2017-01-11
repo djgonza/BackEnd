@@ -1,0 +1,16 @@
+body{
+    font-family: Helvetica;
+}
+
+h1{
+    padding: 0.5em;
+    text-align: center;
+}
+
+legend, label{
+	
+}
+
+label, input[type="text"]{
+    float: left;
+}
