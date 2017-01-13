@@ -17,19 +17,19 @@ if (isset($validator)){
 <form action="index.php" method="post">
 	
 	<label>Nombre</label>
-	<input type="text" name="nombre" value="<? echo Input::get('nombre'); ?>">
+	<input type="text" name="nombre" value="<?php echo Input::get('nombre'); ?>">
 
 	<label>Apellido</label>
-	<input type="text" name="apellido" value="<? echo Input::get('apellido'); ?>">
+	<input type="text" name="apellido" value="<?php echo Input::get('apellido'); ?>">
 
 	<label>Nº Seguridad Social</label>
-	<input type="text" name="nss" value="<? echo Input::get('nss'); ?>">
+	<input type="text" name="nss" value="<?php echo Input::get('nss'); ?>">
 
 	<label>Cantidad Fija</label>
-	<input type="text" name="fijo" value="<? echo Input::get('fijo'); ?>">
+	<input type="text" name="fijo" value="<?php echo Input::get('fijo'); ?>">
 
 	<label>Ventas Brutas</label>
-	<input type="text" name="ventasbrutas" value="<? echo Input::get('ventasbrutas'); ?>">
+	<input type="text" name="ventasbrutas" value="<?php echo Input::get('ventasbrutas'); ?>">
 
 	<label>Tarifa Comision</label>
 	<select name="tarifacomision">

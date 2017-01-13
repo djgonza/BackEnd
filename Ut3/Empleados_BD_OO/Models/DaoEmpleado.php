@@ -10,9 +10,15 @@ class DaoEmpleado {
 
 	}
 
-	public function getEmpleado ($nssEmpleado) {
+	public function getEmpleados ($nss) {
 
+		$this->db->connect();
 
+		$sql = "SELECT * FROM `empleados` WHERE `nss` like '%?%'";
+
+		return $this->db->execute($sql, array($nss));
+
+		$this->db->disconnect();
 
 	}
 
@@ -22,15 +28,15 @@ class DaoEmpleado {
 
 		$sql = "INSERT INTO `empleados` (`nombre`, `apellido`, `nss`, `fijo`, `ventasbrutas`, `tarifacomision`) VALUES (?, ?, ?, ?, ?, ?);";
 		$args = array(
-			utf8_decode($empleado->getNombre()),
-			utf8_decode($empleado->getApellido()),
-			utf8_decode($empleado->getNSS()),
-			utf8_decode($empleado->getFijo()),
-			utf8_decode($empleado->getVentasBrutas()),
-			utf8_decode($empleado->getTarifaComision())
+			utf8_encode($empleado->getNombre()),
+			utf8_encode($empleado->getApellido()),
+			utf8_encode($empleado->getNSS()),
+			utf8_encode($empleado->getFijo()),
+			utf8_encode($empleado->getVentasBrutas()),
+			utf8_encode($empleado->getTarifaComision())
 		);
 
-		$this->db->execute($sql, $args);
+		$this->db->executeAction($sql, $args);
 
 		$this->db->disconnect();
 
@@ -44,7 +50,7 @@ class DaoEmpleado {
 
 		$this->db->connect();
 
-		$this->db->execute("DELETE FROM `empleados` WHERE `empleados`.`nss` = '$nss'");
+		$this->db->executeAction("DELETE FROM `empleados` WHERE `empleados`.`nss` = ?", array($nss));
 
 		$this->db->disconnect();
 

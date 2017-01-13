@@ -11,11 +11,6 @@ abstract class Empleado {
         $this->numeroSeguroSocial = $var_numeroSeguroSocial;
     }
     
-    function mostrar(){
-         echo "<p> Nombre: " .$this -> getPrimerNombre()."</p>"; 
-         echo "<p>Apellido: ".$this -> getApellido()."</p>";
-         echo "<p> Seguridad Social: ".$this -> getNumeroSeguroSocial()."</p>";     
-    }
     function getNombre()
     {
         return $this->primerNombre;
@@ -44,10 +39,9 @@ abstract class Empleado {
     {
         $this->numeroSeguroSocial = $numeroSeguroSocial;
     }
-
-    abstract function ingresos();
-    
+   
 
 }
+
 ?>
 

@@ -26,7 +26,7 @@ class DB implements IDataBase {
 		$this->connection = null;
 	}
 
-	public function execute ($sql, $args = NULL) {
+	/*public function execute ($sql, $args = NULL) {
 
 		try{
 
@@ -45,7 +45,38 @@ class DB implements IDataBase {
 
 		}
 
+	}*/
+
+	public function execute ($sql, $args = NULL) {
+
+		try {
+
+			$result = $this->connection->prepare($sql);
+			$result->execute($args);
+			return $result->fetchAll();
+			
+		}catch (Exception $e){
+
+			exit();
+
+		}
+
 	}
+
+	public function executeAction ($sql, $args = NULL) {
+
+		try {
+
+			$result = $this->connection->prepare($sql);
+			$result->execute($args);
+
+		}catch (Exception $e){
+
+		}
+
+	}
+
+
 
 	public function nextRow ($result) {
 		return $result->fetch();
