@@ -5,6 +5,12 @@ include "helper/ValidadorForm.php";
 class Controlador{
 
     public function run(){
+        if(isset($_GET["listar"])){
+            $this->dao = new DaoApWeb();
+            $result = $this->dao->listar();
+            include "Vistas/list.php";
+            exit();
+        }
         if (!isset($_POST['validar'])){
             $this->mostrarFormulario("validar", null, null);
             exit();

@@ -39,6 +39,22 @@ class DaoApWeb{
 
     }
 
+    function listar () {
+
+        $this->db->conectar();
+
+        $sql = "SELECT `nombre`, `apellido`, `DNI`, `edad`, `modulo`, `nota`, `curso`, `Idiomas` FROM `apweb`";
+
+        try{
+            return $this->db->ejecutarSqlActualizacion($sql, NULL);
+            $this->db->desconectar();
+        } catch (Exception $ex){
+            return "Error en la consulta de inserción de Apweb";
+            $this->db->desconectar();
+        }
+
+    }
+
 }
 
 ?>

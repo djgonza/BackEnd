@@ -40,6 +40,7 @@ class DataBase implements iDataBase{
         try{
             $resul = $this->conexion->prepare($sql);
             $resul->execute($args);
+            return $resul->fetchAll();
         } catch (Exception $e){
             $error = "Error: no se pudo conectar a la base de datos";
             include 'vistas/error.php';

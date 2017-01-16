@@ -21,6 +21,8 @@ if (isset($resultado)) {
 
 ?>
 
+<a href="index.php?listar">Listar</a>
+
 <form id="form" action="index.php" method="post">
 
 	<legend>Datos Personales</legend>
