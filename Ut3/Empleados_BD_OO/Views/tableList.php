@@ -8,6 +8,8 @@
 			<th>Fijo</th>
 			<th>Ventas Brutas</th>
 			<th>Tarifa Comision</th>
+			<th><i class="material-icons">delete</i></th>
+			<th><i class="material-icons">mode_edit</i></th>
 		</tr>
 	</thead>
 
@@ -20,12 +22,12 @@
 			?>
 
 			<tr>
-				<td><?php echo utf8_encode($result[$i]["nombre"]); ?></td>
-				<td><?php echo utf8_encode($result[$i]["apellido"]); ?></td>
-				<td><?php echo utf8_encode($result[$i]["nss"]); ?></td>
-				<td><?php echo utf8_encode($result[$i]["fijo"]); ?></td>
-				<td><?php echo utf8_encode($result[$i]["ventasbrutas"]); ?></td>
-				<td><?php echo utf8_encode($result[$i]["tarifacomision"]); ?></td>
+				<td><?php echo $result[$i]["nombre"]; ?></td>
+				<td><?php echo $result[$i]["apellido"]; ?></td>
+				<td><?php echo $result[$i]["nss"]; ?></td>
+				<td><?php echo $result[$i]["fijo"]; ?></td>
+				<td><?php echo $result[$i]["ventasbrutas"]; ?></td>
+				<td><?php echo $result[$i]["tarifacomision"]; ?></td>
 				<td>
 					<form action="index.php" method="POST">
 						<input type="hidden" name="nss" value="<?php echo $result[$i]["nss"]; ?>">

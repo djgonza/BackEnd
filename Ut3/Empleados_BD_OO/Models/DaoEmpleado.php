@@ -10,13 +10,25 @@ class DaoEmpleado {
 
 	}
 
-	public function getEmpleados ($nss) {
+	public function getEmpleados ($nss = "") {
 
 		$this->db->connect();
 
-		$sql = "SELECT * FROM `empleados` WHERE `nss` like '%?%'";
+		$sql = "SELECT * FROM `empleados` WHERE `nss` like '%$nss%'";
 
-		return $this->db->execute($sql, array($nss));
+		return $this->db->execute($sql);
+
+		$this->db->disconnect();
+
+	}
+
+	public function getEmpleado ($nss) {
+
+		$this->db->connect();
+
+		$sql = "SELECT * FROM `empleados` WHERE `nss` = '$nss'";
+
+		return $this->db->execute($sql);
 
 		$this->db->disconnect();
 
@@ -27,6 +39,7 @@ class DaoEmpleado {
 		$this->db->connect();
 
 		$sql = "INSERT INTO `empleados` (`nombre`, `apellido`, `nss`, `fijo`, `ventasbrutas`, `tarifacomision`) VALUES (?, ?, ?, ?, ?, ?);";
+
 		$args = array(
 			utf8_encode($empleado->getNombre()),
 			utf8_encode($empleado->getApellido()),
@@ -42,7 +55,24 @@ class DaoEmpleado {
 
 	}
 
-	public function updateEmpleado ($nss, $empleado) {
+	public function updateEmpleado ($empleado) {
+
+		$this->db->connect();
+
+		$sql = "UPDATE `empleados` SET `nombre` = ?, `apellido` = ?, `fijo` = ?, `ventasbrutas` = ?, `tarifacomision` = ? WHERE `nss` = ?";
+
+		$args = array(
+			utf8_encode($empleado->getNombre()),
+			utf8_encode($empleado->getApellido()),
+			utf8_encode($empleado->getFijo()),
+			utf8_encode($empleado->getVentasBrutas()),
+			utf8_encode($empleado->getTarifaComision()),
+			utf8_encode($empleado->getNSS())
+		);
+
+		$this->db->executeAction($sql, $args);
+
+		$this->db->disconnect();
 
 	}
 
@@ -68,6 +98,8 @@ class DaoEmpleado {
 	}
 
 	public function balance () {
+
+		
 
 	}
 

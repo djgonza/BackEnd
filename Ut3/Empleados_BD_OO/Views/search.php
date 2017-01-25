@@ -7,7 +7,7 @@
 	<label>Nº Seguridad Social</label>
 	<input type="text" name="nss" value="<?php echo Input::get('nss'); ?>">
 
-	<input type="submit" name="search" value="Buscar">
+	<input type="submit" class="inputAction" name="search" value="Buscar">
 
 </form>
 

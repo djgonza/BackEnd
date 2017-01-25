@@ -11,7 +11,7 @@
 	<input type="text" name="apellido" value="<?php echo $empleado->getApellido(); ?>">
 
 	<label>Nº Seguridad Social</label>
-	<input type="text" name="nss" value="<?php echo $empleado->getNss(); ?>">
+	<input type="text" name="nss" value="<?php echo $empleado->getNss(); ?>" disabled>
 
 	<label>Cantidad Fija</label>
 	<input type="text" name="fijo" value="<?php echo $empleado->getFijo(); ?>">
@@ -21,10 +21,17 @@
 
 	<label>Tarifa Comision</label>
 	<select name="tarifacomision">
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
+		<?php
+		$values = array("1", "2", "3");
+		foreach ($values as $value){
+			echo "<option value='".$value."'";
+			echo Utilidades::verificarLista($empleado->getTarifaComision(), $value);
+			echo ">$value</option>";
+		}
+		?>
 	</select>
+
+	<input type="hidden" name="nss" value="<?php echo $empleado->getNss(); ?>">
 
 	<input type="submit" name="update" value="Actualizar">
 

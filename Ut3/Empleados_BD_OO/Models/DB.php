@@ -71,7 +71,7 @@ class DB implements IDataBase {
 			$result->execute($args);
 
 		}catch (Exception $e){
-
+			echo $e;
 		}
 
 	}

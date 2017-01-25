@@ -43,7 +43,7 @@ if (isset($validator)){
 		?>
 	</select>
 
-	<input type="submit" name="insert" value="Insertar">
+	<input type="submit" class="inputAction" name="insert" value="Insertar">
 
 </form>
 
