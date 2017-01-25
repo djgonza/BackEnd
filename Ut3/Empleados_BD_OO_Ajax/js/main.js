@@ -5,7 +5,7 @@ class Search {
 	constructor (input, tBody) {
 		
 		this.input = input;
-		this.tBody = tBody;
+		this.tBody = tBody[0];
 
 		this.initEvents ();
 
@@ -37,7 +37,8 @@ class Search {
 			type: "POST",
 			success: function(response) {
 
-				console.log(response);
+				search.setTableData($.parseJSON(response));
+				//console.log($.parseJSON(response));
 
 			},
 			error: function(xhr) {
@@ -46,6 +47,30 @@ class Search {
 
 			}
 
+		});
+
+	}
+
+	setTableData (data) {
+
+		var search = this;
+
+		search.tBody.innerHTML = "";
+
+		$(data).each (function (i, element) {
+
+			var tr = $("<tr></tr>").append(
+					"<td>"+element[0]+"</td>",
+					"<td>"+element[1]+"</td>",
+					"<td>"+element[2]+"</td>",
+					"<td>"+element[3]+"</td>",
+					"<td>"+element[4]+"</td>",
+					"<td>"+element[5]+"</td>",
+					'<form action="index.php" method="POST"><input type="hidden" name="nss" value="'+element[3]+'"><input type="submit" name="delete" value="Borrar"></form>',
+					'<form action="index.php" method="POST"><input type="hidden" name="nss" value="'+element[3]+'"><input type="submit" name="update" value="Editar"></form>'
+				);
+			search.tBody.append(tr[0]);
+			
 		});
 
 	}
@@ -59,9 +84,7 @@ $(function () {
 		new Search ($("#search"), $("tBody"));
 
 	}
-
 	
-
 });
 
 
