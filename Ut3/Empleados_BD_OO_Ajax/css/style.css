@@ -1,0 +1,131 @@
+html, body {
+	color: #424242;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	width: 25%;
+	background-color: #51D2B7;
+	padding: 1em;
+	color: #fff;
+	font-size: 2em;
+	box-sizing: border-box;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+
+h2 {
+	margin: 0;
+    position: absolute;
+    top: 0;
+    left: -1%;
+    right: -1%;
+    box-sizing: border-box;
+    padding: 0.3em;
+    padding-left: 1em;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
+    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
+}
+
+nav {
+	width: 25%;
+	background-color: #2A2D33;
+	padding: 1em;
+	box-sizing: border-box;
+	min-height: 90%;
+	position: absolute;
+	top: 10%;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 1.5em;
+	padding-top: 1em;
+}
+
+nav li {
+	list-style: none;
+	margin: 0.3em 0;
+	position: relative;
+}
+
+nav li i {
+	color: #fff;
+}
+
+nav a {
+	text-decoration: none;
+    color: #E0E0E0;
+    position: absolute;
+    top: 0.2em;
+    left: 2em;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+section {
+	position: absolute;
+    left: 25%;
+    top: 0;
+    width: 75%;
+    box-sizing: border-box;
+    padding: 1em;
+    padding-top: 4em;
+    height: 100%;
+    background-color: #FAFAFA;
+}
+
+table {
+	width: 100%;
+}
+
+tr:nth-child(even) {
+	background-color: #EEEEEE;
+}
+
+tr:nth-child(1) {
+	border: 1px solid #212121;
+}
+
+th {
+	text-align: left;
+}
+
+form label {
+	width: 100%;
+}
+
+form input {
+	width: 100%;
+	margin: 1em 0;
+	padding: 0.5em 0.5em;
+	box-sizing: border-box;
+}
+
+form select {
+	width: 100%;
+	padding: 0.5em 0.5em;
+}
+
+form input[type="submit"] {
+	width: 100%;
+	margin: 0;
+}
+
+.inputAction {
+	width: 25% !important;
+	margin-left: 75% !important;
+	margin-top: 1em !important;
+	margin-bottom: 1em !important;
+}
