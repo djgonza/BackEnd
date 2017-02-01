@@ -1,3 +1,8 @@
+*{
+	box-sizing: border-box;
+}
+
+
 html, body {
 	color: #424242;
 	margin: 0;
@@ -9,6 +14,7 @@ html, body {
 
 h1 {
 	width: 25%;
+	max-width: 250px;
 	background-color: #51D2B7;
 	padding: 1em;
 	color: #fff;
@@ -22,27 +28,31 @@ h1 {
 
 h2 {
 	margin: 0;
-    position: absolute;
-    top: 0;
-    left: -1%;
-    right: -1%;
-    box-sizing: border-box;
-    padding: 0.3em;
-    padding-left: 1em;
-    background-color: #fff;
-    -webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
-    -moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
-    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
+	position: absolute;
+	top: 0;
+	left: 0%;
+	right: 0%;
+	height: 4.15em;
+	box-sizing: border-box;
+	padding: 0.3em;
+	padding-left: 1em;
+	padding-top: 2.5em;
+	background-color: #fff;
+	-webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
+	box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.24);
 }
 
 nav {
 	width: 25%;
+	max-width: 250px;
 	background-color: #2A2D33;
 	padding: 1em;
 	box-sizing: border-box;
 	min-height: 90%;
 	position: absolute;
-	top: 10%;
+	top: 12.99%;
+	z-index: 100;
 }
 
 nav ul {
@@ -64,10 +74,10 @@ nav li i {
 
 nav a {
 	text-decoration: none;
-    color: #E0E0E0;
-    position: absolute;
-    top: 0.2em;
-    left: 2em;
+	color: #E0E0E0;
+	position: absolute;
+	top: 0.2em;
+	left: 2em;
 }
 
 nav a:hover {
@@ -76,14 +86,14 @@ nav a:hover {
 
 section {
 	position: absolute;
-    left: 25%;
-    top: 0;
-    width: 75%;
-    box-sizing: border-box;
-    padding: 1em;
-    padding-top: 4em;
-    height: 100%;
-    background-color: #FAFAFA;
+	left: 250px;
+	top: 0;
+	width: calc(100% - 250px);
+	box-sizing: border-box;
+	padding: 2em;
+	padding-top: 8em;
+	height: 100%;
+	background-color: #FAFAFA;
 }
 
 table {
