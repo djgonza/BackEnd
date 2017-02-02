@@ -2,10 +2,10 @@
 
 class Search {
 
-	constructor (input, tBody) {
+	constructor (input, section) {
 		
 		this.input = input;
-		this.tBody = tBody[0];
+		this.section = section;
 
 		this.initEvents ();
 
@@ -15,7 +15,7 @@ class Search {
 
 		var search = this;
 
-		this.input.keypress (function (e) {
+		this.input.keyup (function (e) {
 
 			search.getData();
 
@@ -37,8 +37,8 @@ class Search {
 			type: "POST",
 			success: function(response) {
 
-				search.setTableData($.parseJSON(response));
-				//console.log($.parseJSON(response));
+				//console.log(response);
+				search.setTable(response);
 
 			},
 			error: function(xhr) {
@@ -51,27 +51,10 @@ class Search {
 
 	}
 
-	setTableData (data) {
+	setTable (table) {
 
-		var search = this;
-
-		search.tBody.innerHTML = "";
-
-		$(data).each (function (i, element) {
-
-			var tr = $("<tr></tr>").append(
-					"<td>"+element[0]+"</td>",
-					"<td>"+element[1]+"</td>",
-					"<td>"+element[2]+"</td>",
-					"<td>"+element[3]+"</td>",
-					"<td>"+element[4]+"</td>",
-					"<td>"+element[5]+"</td>",
-					'<form action="index.php" method="POST"><input type="hidden" name="nss" value="'+element[3]+'"><input type="submit" name="delete" value="Borrar"></form>',
-					'<form action="index.php" method="POST"><input type="hidden" name="nss" value="'+element[3]+'"><input type="submit" name="update" value="Editar"></form>'
-				);
-			search.tBody.append(tr[0]);
-			
-		});
+		this.section.find("table").remove();
+		this.section.append(table);
 
 	}
 
@@ -81,7 +64,7 @@ $(function () {
 
 	if(window.location.href.split("/")[3] == "index.php?section=search"){
 
-		new Search ($("#search"), $("tBody"));
+		new Search ($("#search"), $("section"));
 
 	}
 	
