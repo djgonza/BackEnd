@@ -1,0 +1,78 @@
+[03-Feb-2017 10:01:02 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in C:\xampp\htdocs\wordpress\wp-includes\wp-db.php on line 1171
+[03-Feb-2017 10:01:02 UTC] PHP Stack trace:
+[03-Feb-2017 10:01:02 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[03-Feb-2017 10:01:02 UTC] PHP   2. deactivate_plugins() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:180
+[03-Feb-2017 10:01:02 UTC] PHP   3. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\plugin.php:704
+[03-Feb-2017 10:01:02 UTC] PHP   4. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[03-Feb-2017 10:01:02 UTC] PHP   5. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[03-Feb-2017 10:01:02 UTC] PHP   6. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:01:02 UTC] PHP   7. wpe_unistall() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:01:02 UTC] PHP   8. DB::deletePage() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:37
+[03-Feb-2017 10:01:02 UTC] PHP   9. wp_delete_post() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\db_dj.php:51
+[03-Feb-2017 10:01:02 UTC] PHP  10. wpdb->prepare() C:\xampp\htdocs\wordpress\wp-includes\post.php:2428
+[03-Feb-2017 10:01:02 UTC] PHP  11. array_walk() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1309
+[03-Feb-2017 10:01:02 UTC] PHP  12. wpdb->escape_by_ref() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1309
+[03-Feb-2017 10:01:02 UTC] PHP  13. wpdb->_real_escape() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1254
+[03-Feb-2017 10:01:02 UTC] PHP  14. mysqli_real_escape_string() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1171
+[03-Feb-2017 10:02:52 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in C:\xampp\htdocs\wordpress\wp-includes\wp-db.php on line 1171
+[03-Feb-2017 10:02:52 UTC] PHP Stack trace:
+[03-Feb-2017 10:02:52 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[03-Feb-2017 10:02:52 UTC] PHP   2. deactivate_plugins() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:180
+[03-Feb-2017 10:02:52 UTC] PHP   3. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\plugin.php:704
+[03-Feb-2017 10:02:52 UTC] PHP   4. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[03-Feb-2017 10:02:52 UTC] PHP   5. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[03-Feb-2017 10:02:52 UTC] PHP   6. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:02:52 UTC] PHP   7. wpe_unistall() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:02:52 UTC] PHP   8. DB::deletePage() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:37
+[03-Feb-2017 10:02:52 UTC] PHP   9. wp_delete_post() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\db_dj.php:51
+[03-Feb-2017 10:02:52 UTC] PHP  10. wpdb->prepare() C:\xampp\htdocs\wordpress\wp-includes\post.php:2428
+[03-Feb-2017 10:02:52 UTC] PHP  11. array_walk() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1309
+[03-Feb-2017 10:02:52 UTC] PHP  12. wpdb->escape_by_ref() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1309
+[03-Feb-2017 10:02:52 UTC] PHP  13. wpdb->_real_escape() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1254
+[03-Feb-2017 10:02:52 UTC] PHP  14. mysqli_real_escape_string() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1171
+[03-Feb-2017 10:03:12 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 2 to be string, object given in C:\xampp\htdocs\wordpress\wp-includes\wp-db.php on line 1171
+[03-Feb-2017 10:03:12 UTC] PHP Stack trace:
+[03-Feb-2017 10:03:12 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[03-Feb-2017 10:03:12 UTC] PHP   2. deactivate_plugins() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:180
+[03-Feb-2017 10:03:12 UTC] PHP   3. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\plugin.php:704
+[03-Feb-2017 10:03:12 UTC] PHP   4. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[03-Feb-2017 10:03:12 UTC] PHP   5. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[03-Feb-2017 10:03:12 UTC] PHP   6. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:03:12 UTC] PHP   7. wpe_unistall() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:03:12 UTC] PHP   8. DB::deletePage() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:37
+[03-Feb-2017 10:03:12 UTC] PHP   9. wp_delete_post() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\db_dj.php:51
+[03-Feb-2017 10:03:12 UTC] PHP  10. wpdb->prepare() C:\xampp\htdocs\wordpress\wp-includes\post.php:2428
+[03-Feb-2017 10:03:12 UTC] PHP  11. array_walk() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1309
+[03-Feb-2017 10:03:12 UTC] PHP  12. wpdb->escape_by_ref() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1309
+[03-Feb-2017 10:03:12 UTC] PHP  13. wpdb->_real_escape() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1254
+[03-Feb-2017 10:03:12 UTC] PHP  14. mysqli_real_escape_string() C:\xampp\htdocs\wordpress\wp-includes\wp-db.php:1171
+[03-Feb-2017 10:04:11 UTC] PHP Notice:  Undefined variable: wpdb in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\db_dj.php on line 51
+[03-Feb-2017 10:04:11 UTC] PHP Stack trace:
+[03-Feb-2017 10:04:11 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[03-Feb-2017 10:04:11 UTC] PHP   2. deactivate_plugins() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:180
+[03-Feb-2017 10:04:11 UTC] PHP   3. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\plugin.php:704
+[03-Feb-2017 10:04:11 UTC] PHP   4. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[03-Feb-2017 10:04:11 UTC] PHP   5. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[03-Feb-2017 10:04:11 UTC] PHP   6. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:04:11 UTC] PHP   7. wpe_unistall() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:04:11 UTC] PHP   8. DB::deletePage() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:37
+[03-Feb-2017 10:04:11 UTC] PHP Fatal error:  Call to a member function get_var() on a non-object in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\db_dj.php on line 51
+[03-Feb-2017 10:04:11 UTC] PHP Stack trace:
+[03-Feb-2017 10:04:11 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[03-Feb-2017 10:04:11 UTC] PHP   2. deactivate_plugins() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:180
+[03-Feb-2017 10:04:11 UTC] PHP   3. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\plugin.php:704
+[03-Feb-2017 10:04:11 UTC] PHP   4. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[03-Feb-2017 10:04:11 UTC] PHP   5. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[03-Feb-2017 10:04:11 UTC] PHP   6. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:04:11 UTC] PHP   7. wpe_unistall() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:04:11 UTC] PHP   8. DB::deletePage() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:37
+[03-Feb-2017 10:12:03 UTC] PHP Notice:  Undefined variable: page_title in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\db_dj.php on line 54
+[03-Feb-2017 10:12:03 UTC] PHP Stack trace:
+[03-Feb-2017 10:12:03 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[03-Feb-2017 10:12:03 UTC] PHP   2. deactivate_plugins() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:180
+[03-Feb-2017 10:12:03 UTC] PHP   3. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\plugin.php:704
+[03-Feb-2017 10:12:03 UTC] PHP   4. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[03-Feb-2017 10:12:03 UTC] PHP   5. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[03-Feb-2017 10:12:03 UTC] PHP   6. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:12:03 UTC] PHP   7. wpe_unistall() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[03-Feb-2017 10:12:03 UTC] PHP   8. DB::deletePage() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:37
