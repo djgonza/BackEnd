@@ -50,8 +50,8 @@ class DB {
 
 		global $wpdb;
 
-		//wp_delete_post($wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_title = '".$title."'" ), true);
-		wp_delete_post(get_page_by_title( $page_title), true);
+		wp_delete_post($wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_title = '".$title."'" ), true);
+		//wp_delete_post(get_page_by_title($page_title), true);
 
 	}
 

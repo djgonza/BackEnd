@@ -76,3 +76,117 @@
 [03-Feb-2017 10:12:03 UTC] PHP   6. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
 [03-Feb-2017 10:12:03 UTC] PHP   7. wpe_unistall() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
 [03-Feb-2017 10:12:03 UTC] PHP   8. DB::deletePage() C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:37
+[06-Feb-2017 12:45:21 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'wpautop_control_options' not found or invalid function name in C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php on line 298
+[06-Feb-2017 12:45:21 UTC] PHP Stack trace:
+[06-Feb-2017 12:45:21 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\options-general.php:0
+[06-Feb-2017 12:45:21 UTC] PHP   2. require_once() C:\xampp\htdocs\wordpress\wp-admin\options-general.php:10
+[06-Feb-2017 12:45:21 UTC] PHP   3. do_action() C:\xampp\htdocs\wordpress\wp-admin\admin.php:222
+[06-Feb-2017 12:45:21 UTC] PHP   4. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 12:45:21 UTC] PHP   5. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 12:45:21 UTC] PHP   6. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 12:51:51 UTC] PHP Notice:  Undefined variable: icon_url in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php on line 50
+[06-Feb-2017 12:51:51 UTC] PHP Stack trace:
+[06-Feb-2017 12:51:51 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[06-Feb-2017 12:51:51 UTC] PHP   2. require_once() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:10
+[06-Feb-2017 12:51:51 UTC] PHP   3. require() C:\xampp\htdocs\wordpress\wp-admin\admin.php:138
+[06-Feb-2017 12:51:51 UTC] PHP   4. require_once() C:\xampp\htdocs\wordpress\wp-admin\menu.php:282
+[06-Feb-2017 12:51:51 UTC] PHP   5. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\menu.php:149
+[06-Feb-2017 12:51:51 UTC] PHP   6. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 12:51:51 UTC] PHP   7. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 12:51:51 UTC] PHP   8. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 12:51:51 UTC] PHP   9. my_plugin_menu() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 12:51:51 UTC] PHP Notice:  Undefined variable: position in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php on line 50
+[06-Feb-2017 12:51:51 UTC] PHP Stack trace:
+[06-Feb-2017 12:51:51 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[06-Feb-2017 12:51:51 UTC] PHP   2. require_once() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:10
+[06-Feb-2017 12:51:51 UTC] PHP   3. require() C:\xampp\htdocs\wordpress\wp-admin\admin.php:138
+[06-Feb-2017 12:51:51 UTC] PHP   4. require_once() C:\xampp\htdocs\wordpress\wp-admin\menu.php:282
+[06-Feb-2017 12:51:51 UTC] PHP   5. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\menu.php:149
+[06-Feb-2017 12:51:51 UTC] PHP   6. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 12:51:51 UTC] PHP   7. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 12:51:51 UTC] PHP   8. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 12:51:51 UTC] PHP   9. my_plugin_menu() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 12:51:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:50) in C:\xampp\htdocs\wordpress\wp-includes\option.php on line 828
+[06-Feb-2017 12:51:51 UTC] PHP Stack trace:
+[06-Feb-2017 12:51:51 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[06-Feb-2017 12:51:51 UTC] PHP   2. require_once() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:422
+[06-Feb-2017 12:51:51 UTC] PHP   3. wp_user_settings() C:\xampp\htdocs\wordpress\wp-admin\admin-header.php:63
+[06-Feb-2017 12:51:51 UTC] PHP   4. setcookie() C:\xampp\htdocs\wordpress\wp-includes\option.php:828
+[06-Feb-2017 12:51:51 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\wp_empleados.php:50) in C:\xampp\htdocs\wordpress\wp-includes\option.php on line 829
+[06-Feb-2017 12:51:51 UTC] PHP Stack trace:
+[06-Feb-2017 12:51:51 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:0
+[06-Feb-2017 12:51:51 UTC] PHP   2. require_once() C:\xampp\htdocs\wordpress\wp-admin\plugins.php:422
+[06-Feb-2017 12:51:51 UTC] PHP   3. wp_user_settings() C:\xampp\htdocs\wordpress\wp-admin\admin-header.php:63
+[06-Feb-2017 12:51:51 UTC] PHP   4. setcookie() C:\xampp\htdocs\wordpress\wp-includes\option.php:829
+[06-Feb-2017 13:10:37 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'new Menu()' not found or invalid function name in C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php on line 298
+[06-Feb-2017 13:10:37 UTC] PHP Stack trace:
+[06-Feb-2017 13:10:37 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\admin.php:0
+[06-Feb-2017 13:10:37 UTC] PHP   2. require() C:\xampp\htdocs\wordpress\wp-admin\admin.php:138
+[06-Feb-2017 13:10:37 UTC] PHP   3. require_once() C:\xampp\htdocs\wordpress\wp-admin\menu.php:282
+[06-Feb-2017 13:10:37 UTC] PHP   4. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\menu.php:149
+[06-Feb-2017 13:10:37 UTC] PHP   5. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 13:10:37 UTC] PHP   6. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 13:10:37 UTC] PHP   7. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:12:10 UTC] PHP Strict standards:  call_user_func_array() expects parameter 1 to be a valid callback, non-static method Menu::init() should not be called statically in C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php on line 298
+[06-Feb-2017 13:12:10 UTC] PHP Stack trace:
+[06-Feb-2017 13:12:10 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\admin.php:0
+[06-Feb-2017 13:12:10 UTC] PHP   2. require() C:\xampp\htdocs\wordpress\wp-admin\admin.php:138
+[06-Feb-2017 13:12:10 UTC] PHP   3. require_once() C:\xampp\htdocs\wordpress\wp-admin\menu.php:282
+[06-Feb-2017 13:12:10 UTC] PHP   4. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\menu.php:149
+[06-Feb-2017 13:12:10 UTC] PHP   5. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 13:12:10 UTC] PHP   6. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 13:12:10 UTC] PHP   7. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:12:10 UTC] PHP Fatal error:  Using $this when not in object context in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\menu_dj.php on line 7
+[06-Feb-2017 13:12:10 UTC] PHP Stack trace:
+[06-Feb-2017 13:12:10 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\admin.php:0
+[06-Feb-2017 13:12:10 UTC] PHP   2. require() C:\xampp\htdocs\wordpress\wp-admin\admin.php:138
+[06-Feb-2017 13:12:10 UTC] PHP   3. require_once() C:\xampp\htdocs\wordpress\wp-admin\menu.php:282
+[06-Feb-2017 13:12:10 UTC] PHP   4. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\menu.php:149
+[06-Feb-2017 13:12:10 UTC] PHP   5. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 13:12:10 UTC] PHP   6. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 13:12:10 UTC] PHP   7. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:12:10 UTC] PHP   8. Menu::init() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:13:37 UTC] PHP Fatal error:  Using $this when not in object context in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\menu_dj.php on line 7
+[06-Feb-2017 13:13:37 UTC] PHP Stack trace:
+[06-Feb-2017 13:13:37 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\admin.php:0
+[06-Feb-2017 13:13:37 UTC] PHP   2. require() C:\xampp\htdocs\wordpress\wp-admin\admin.php:138
+[06-Feb-2017 13:13:37 UTC] PHP   3. require_once() C:\xampp\htdocs\wordpress\wp-admin\menu.php:282
+[06-Feb-2017 13:13:37 UTC] PHP   4. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\menu.php:149
+[06-Feb-2017 13:13:37 UTC] PHP   5. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 13:13:37 UTC] PHP   6. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 13:13:37 UTC] PHP   7. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:13:37 UTC] PHP   8. Menu::init() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:14:14 UTC] PHP Notice:  Undefined variable: self in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\menu_dj.php on line 7
+[06-Feb-2017 13:14:14 UTC] PHP Stack trace:
+[06-Feb-2017 13:14:14 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\admin.php:0
+[06-Feb-2017 13:14:14 UTC] PHP   2. require() C:\xampp\htdocs\wordpress\wp-admin\admin.php:138
+[06-Feb-2017 13:14:14 UTC] PHP   3. require_once() C:\xampp\htdocs\wordpress\wp-admin\menu.php:282
+[06-Feb-2017 13:14:14 UTC] PHP   4. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\menu.php:149
+[06-Feb-2017 13:14:14 UTC] PHP   5. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 13:14:14 UTC] PHP   6. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 13:14:14 UTC] PHP   7. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:14:14 UTC] PHP   8. Menu::init() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:14:14 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, invalid function name in C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php on line 298
+[06-Feb-2017 13:14:14 UTC] PHP Stack trace:
+[06-Feb-2017 13:14:14 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\admin.php:0
+[06-Feb-2017 13:14:14 UTC] PHP   2. do_action() C:\xampp\htdocs\wordpress\wp-admin\admin.php:222
+[06-Feb-2017 13:14:14 UTC] PHP   3. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 13:14:14 UTC] PHP   4. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 13:14:14 UTC] PHP   5. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:14:48 UTC] PHP Notice:  Undefined variable: this in C:\xampp\htdocs\wordpress\wp-content\plugins\wp_empleados\lib\menu_dj.php on line 7
+[06-Feb-2017 13:14:48 UTC] PHP Stack trace:
+[06-Feb-2017 13:14:48 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\admin.php:0
+[06-Feb-2017 13:14:48 UTC] PHP   2. require() C:\xampp\htdocs\wordpress\wp-admin\admin.php:138
+[06-Feb-2017 13:14:48 UTC] PHP   3. require_once() C:\xampp\htdocs\wordpress\wp-admin\menu.php:282
+[06-Feb-2017 13:14:48 UTC] PHP   4. do_action() C:\xampp\htdocs\wordpress\wp-admin\includes\menu.php:149
+[06-Feb-2017 13:14:48 UTC] PHP   5. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 13:14:48 UTC] PHP   6. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 13:14:48 UTC] PHP   7. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:14:48 UTC] PHP   8. Menu::init() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
+[06-Feb-2017 13:14:48 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, invalid function name in C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php on line 298
+[06-Feb-2017 13:14:48 UTC] PHP Stack trace:
+[06-Feb-2017 13:14:48 UTC] PHP   1. {main}() C:\xampp\htdocs\wordpress\wp-admin\admin.php:0
+[06-Feb-2017 13:14:48 UTC] PHP   2. do_action() C:\xampp\htdocs\wordpress\wp-admin\admin.php:222
+[06-Feb-2017 13:14:48 UTC] PHP   3. WP_Hook->do_action() C:\xampp\htdocs\wordpress\wp-includes\plugin.php:453
+[06-Feb-2017 13:14:48 UTC] PHP   4. WP_Hook->apply_filters() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:323
+[06-Feb-2017 13:14:48 UTC] PHP   5. call_user_func_array:{C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298}() C:\xampp\htdocs\wordpress\wp-includes\class-wp-hook.php:298
