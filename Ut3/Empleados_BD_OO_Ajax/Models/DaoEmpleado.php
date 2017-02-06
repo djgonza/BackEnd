@@ -99,7 +99,11 @@ class DaoEmpleado {
 
 	public function balance () {
 
-		
+		$this->db->connect();
+
+		return $this->db->execute("SELECT * FROM `empleados`");
+
+		$this->db->disconnect();
 
 	}
 
