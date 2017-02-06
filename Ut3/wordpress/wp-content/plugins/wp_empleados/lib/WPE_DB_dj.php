@@ -3,7 +3,7 @@
 /**
 * 
 */
-class DB {
+class WPE_DB {
 
 	static function createTable () {
 
@@ -59,6 +59,10 @@ class DB {
 
 
 
+	}
+
+	static function insert () {
+		
 	}
 
 }
