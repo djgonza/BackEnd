@@ -13,12 +13,14 @@
 	*/
 
 	/* Constantes */
+	global $wpdb;
 	define ('PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
 	define ('PLUGIN_LIB_PATH', PLUGIN_DIR_PATH."lib/");
 	define ('PLUGIN_HELPER_PATH', PLUGIN_DIR_PATH."helper/");
 	define ('PLUGIN_VIEWS_PATH', PLUGIN_DIR_PATH."views/");
 	define ('PLUGIN_JS_PATH', PLUGIN_DIR_PATH."js/");
 	define ('PLUGIN_CSS_PATH', PLUGIN_DIR_PATH."css/");
+	define ('PLUGIN_TABLE_NAME', $wpdb->prefix."empleados_dj");
 
 	/* Dependencias */
 	include_once(ABSPATH.'wp-admin/includes/plugin.php'); // Para is_plugin_active

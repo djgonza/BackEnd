@@ -9,7 +9,7 @@ class WPE_DB {
 
 		global $wpdb;
 
-		$sql = "CREATE TABLE IF NOT EXISTS `".$wpdb->prefix."empleados` (
+		$sql = "CREATE TABLE IF NOT EXISTS `".PLUGIN_TABLE_NAME."` (
 					`nombre` varchar(50) CHARACTER SET utf8 NOT NULL,
 					`apellido` varchar(50) CHARACTER SET utf8 NOT NULL,
 					`nss` varchar(14) CHARACTER SET utf8 NOT NULL,
@@ -26,7 +26,7 @@ class WPE_DB {
 
 		global $wpdb;
 
-		$sql = "Drop table if EXISTS ".$wpdb->prefix."empleados";
+		$sql = "Drop table if EXISTS '".PLUGIN_TABLE_NAME."'";
 
 		$wpdb->query($sql);
 
@@ -49,7 +49,6 @@ class WPE_DB {
 	static function deletePage ($title) {
 
 		global $wpdb;
-
 		wp_delete_post($wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_title = '".$title."'" ), true);
 		//wp_delete_post(get_page_by_title($page_title), true);
 
@@ -57,12 +56,23 @@ class WPE_DB {
 
 	static function listRows () {
 
-
+		global $wpdb;
+		return $empleados = $wpdb->get_results("SELECT * FROM ".PLUGIN_TABLE_NAME);
 
 	}
 
 	static function insert () {
-		
+	
+		global $wpdb;
+		$wpdb->query($wpdb->prepare("INSERT INTO ".PLUGIN_TABLE_NAME." values (%s, %s, %s, %d, %f, %f)", $_POST));
+
+	}
+
+	static function delete($nss) {
+
+		global $wpdb;
+		$wpdb->query("DELETE FROM ".PLUGIN_TABLE_NAME." WHERE `nss` = '".$nss."'");
+
 	}
 
 }

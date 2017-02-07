@@ -1,7 +1,5 @@
 <?php 
 
-
-
 class WPE_Controller {
 
 	function WPE_Controller () {
@@ -10,6 +8,11 @@ class WPE_Controller {
 		add_action('admin_menu', array(&$this, "createMenu"));
 		/* Style */
 		add_action('admin_enqueue_scripts', array(&$this, "includeStyle"));
+
+		//Borrar un empleado
+		if(isset($_POST["delete"])){
+			$this->remove();
+		}
 
 	}
 
@@ -24,9 +27,8 @@ class WPE_Controller {
 			Crear menus en el backend 
 			Nota: Todas las llamadas se han de hacer desde aqui para no perder el ambito de las variables
 		*/
-		add_menu_page("Wp Empleados", "Empleados", 'manage_options', "wp_empleados", array(&$this, 'listEmpleados'), "dashicons-welcome-add-page", "30");
+		add_menu_page("Wp Empleados", "Empleados", 'manage_options', "wp_empleados", array(&$this, 'listRows'), "dashicons-welcome-add-page", "30");
 		add_submenu_page("wp_empleados", "Insertar Empleado", "Insetar Empleados", "administrator", "wp_empleados_insert", array(&$this, 'insert'));
-		add_submenu_page("wp_empleados", "Borrar Empleados", "Borrar Empleados", "administrator", "wp_empleados_remove", array(&$this, 'remove'));
 		add_submenu_page("wp_empleados", "Editar Empleados", "Editar Empleados", "administrator", "wp_empleados_edit", array(&$this, 'edit'));
 		add_submenu_page("wp_empleados", "Buscar Empleados", "Buscar Empleados", "administrator", "wp_empleados_search", array(&$this, 'search'));
 
@@ -82,19 +84,26 @@ class WPE_Controller {
 
 	function listRows () {
 
-		echo "List";
+
+		$empleados = WPE_DB::listRows();
+		include PLUGIN_VIEWS_PATH."list.php";
 
 	}
 
 	function remove () {
 
-		echo "Remove";
+		WPE_DB::delete($_POST["nss"]);
 
 	}
 
 	function edit () {
 
-		echo "Edit";
+		if(isset($_POST["edit"])){
+			
+
+
+		}
+
 
 	}
 
