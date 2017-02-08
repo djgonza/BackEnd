@@ -98,12 +98,21 @@ class WPE_Controller {
 
 	function edit () {
 
-		if(isset($_POST["edit"])){
+		if(isset($_POST["update"])){
 			
+			WPE_DB::update($_POST);
 
+			echo "<div id='wpe_messaje'>Registro Actualizado</div>";
 
 		}
 
+		if(isset($_POST["nss"])){
+
+			$empleado = WPE_DB::getEmpleado($_POST["nss"])[0];
+
+		}
+
+		include PLUGIN_VIEWS_PATH."edit.php";
 
 	}
 

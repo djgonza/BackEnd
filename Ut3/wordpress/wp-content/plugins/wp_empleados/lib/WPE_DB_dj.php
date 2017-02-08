@@ -68,10 +68,24 @@ class WPE_DB {
 
 	}
 
-	static function delete($nss) {
+	static function delete ($nss) {
 
 		global $wpdb;
 		$wpdb->query("DELETE FROM ".PLUGIN_TABLE_NAME." WHERE `nss` = '".$nss."'");
+
+	}
+
+	static function update ($empleado){
+
+		global $wpdb;
+		$wpdb->query($wpdb->prepare('UPDATE '.PLUGIN_TABLE_NAME.' SET nombre = %s, apellido = %s, fijo = %d, ventasbrutas = %f, tarifacomision = %f WHERE nss = %s', $empleado));
+
+	}
+
+	static function getEmpleado ($nss){
+
+		global $wpdb;
+		return $wpdb->get_results('SELECT * FROM '.PLUGIN_TABLE_NAME.' WHERE nss = "'.$nss.'"');
 
 	}
 
