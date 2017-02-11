@@ -1,10 +1,16 @@
-<?php
+<h2>Actualizar Empleado</h2>
 
-var_dump($empleado);
+<?php 
+
+	// Mostramos los errores
+	if (isset($validator)){
+		$errors = $validator->getErrors();
+		foreach ($errors as $key => $value) {
+			echo "<div class='alert danger'>$errors[$key]</div>";
+		}
+	}
 
 ?>
-
-<h2>Actualizar Empleado</h2>
 
 <form action="?page=wp_empleados_edit" method="post">
 	
@@ -28,6 +34,6 @@ var_dump($empleado);
 
 	<input type="hidden" name="nss" value="<?php echo $empleado->nss; ?>">
 
-	<input type="submit" name="update" value="Actualizar">
+	<input type="submit" class="primary" name="update" value="Actualizar">
 
 </form>

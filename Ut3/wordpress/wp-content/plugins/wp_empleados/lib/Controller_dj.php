@@ -9,11 +9,9 @@ class WPE_Controller {
 		/* Style */
 		add_action('admin_enqueue_scripts', array(&$this, "includeStyle"));
 
-		//Borrar un empleado
-		if(isset($_POST["delete"])){
-			$this->remove();
-		}
-
+		// Pagina para mostrar la lista de empleados en el front
+		//add_shortcode("list_empleados", array(&$this, "listRows"));
+	
 	}
 
 	function includeStyle () {
@@ -72,18 +70,22 @@ class WPE_Controller {
 
 				// Insertamos en la DB
 				WPE_DB::insert();
-				echo "<div id='wpe_messaje'>Registro Insertado</div>";
+				echo "<div class='alert succes'>Registro Insertado</div>";
 
 			}
 
 		}
 
 		include PLUGIN_VIEWS_PATH."insert.php";
-		
+
 	}
 
 	function listRows () {
 
+		// Comprobamos si queremos borrar
+		if(isset($_POST["remove"])){
+			$this->remove();
+		}
 
 		$empleados = WPE_DB::listRows();
 		include PLUGIN_VIEWS_PATH."list.php";
@@ -92,23 +94,56 @@ class WPE_Controller {
 
 	function remove () {
 
-		WPE_DB::delete($_POST["nss"]);
+		// Si tenemos confirmacion borramos
+		if(isset($_POST["confirm"]) && $_POST["confirm"] == "Aceptar"){
+
+			WPE_DB::delete($_POST["nss"]);
+			echo "<div class='alert succes'>Registro Borrado</div>";
+
+		// Pedimos confirmacion para eliminar
+		}else{
+
+			include PLUGIN_VIEWS_PATH."confirm_remove.php";
+
+		}
 
 	}
 
 	function edit () {
 
+		// Intentamos editar
 		if(isset($_POST["update"])){
-			
-			WPE_DB::update($_POST);
 
-			echo "<div id='wpe_messaje'>Registro Actualizado</div>";
+			// Limpiamos los datos
+			$this->cleanData ();
+
+			// Creamos el validador
+			$validator = new WPE_Validator ();
+			$validator->setValidatorRules ($this->createValidatorRules ());
+			$validator->validate ($_POST);
+
+			// Validamos
+			if ($validator->isValid()){
+
+				// Actualizamos los datos
+				WPE_DB::update($_POST);
+				echo "<div class='alert succes'>Registro Actualizado</div>";
+
+			}
 
 		}
 
+		// Mostramos los datos para editar
 		if(isset($_POST["nss"])){
 
 			$empleado = WPE_DB::getEmpleado($_POST["nss"])[0];
+
+		// Redireccionamos a listar
+		}else{
+
+			// Redireccion para revisar
+			print('<script>window.location.href="admin.php?page=wp_empleados"</script>');
+			exit();
 
 		}
 
@@ -118,7 +153,15 @@ class WPE_Controller {
 
 	function search () {
 
-		echo "search";
+		// Comprobamos si hay algo que buscar
+		if(isset($_POST["search"])){
+
+			$empleados = WPE_DB::getEmpleados($_POST["nss"]);
+
+		}
+
+		include PLUGIN_VIEWS_PATH."search.php";
+		include PLUGIN_VIEWS_PATH."list.php";
 
 	}
 

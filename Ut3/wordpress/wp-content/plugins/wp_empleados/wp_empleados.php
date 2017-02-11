@@ -42,13 +42,6 @@
 	register_activation_hook (__FILE__, "wpe_install");
 	register_deactivation_hook (__FILE__, "wpe_unistall");
 
-
-//add_shortcode("list_empleados", funcion) remplazar [] y llama a funcion
-//add_action('plugins_loaded', 'init');
-
-//define('WPE_PAGE_LIST', 'Listar Empleados');
-//define('WPE_PAGE_INSERT', 'Insertar Empleados');
-
 	/*
 		
 		Crea la tabla en la DB
@@ -58,43 +51,21 @@
 	function wpe_install () {
 
 		WPE_DB::createTable();
-		WPE_DB::createPage ("Listar Empleados", "[list_empleados]");
+		//WPE_DB::createPage ("Listar Empleados", "[list_empleados]");
 
-		// Check if the menu exists
-		/*$menu_name = 'My First Menu';
-		$menu_exists = wp_get_nav_menu_object( $menu_name );
+	}
 
-		// If it doesn't exist, let's create it.
-		if( !$menu_exists){
-			$menu_id = wp_create_nav_menu($menu_name);
+	/*
+	
+		Elimina las dependencias creadas por el plugin
 
-			// Set up default menu items
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Home'),
-				'menu-item-classes' => 'home',
-				'menu-item-url' => home_url( '/' ), 
-				'menu-item-status' => 'publish'));
+	*/
+	function wpe_unistall () {
 
-			wp_update_nav_menu_item($menu_id, 0, array(
-				'menu-item-title' =>  __('Custom Page'),
-				'menu-item-url' => home_url( '/custom/' ), 
-				'menu-item-status' => 'publish'));
+		WPE_DB::deleteTable();
+		//WPE_DB::deletePage ("Listar Empleados");
 
-			}*/
-
-		}
-
-		/*
-		
-			Elimina las dependencias creadas por el plugin
-
-		*/
-		function wpe_unistall () {
-
-			WPE_DB::deleteTable();
-			WPE_DB::deletePage ("Listar Empleados");
-
-		}
+	}
 
 
 ?>

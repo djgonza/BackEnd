@@ -14,31 +14,43 @@
 		</tr>
 	</thead>
 	<tbody>
+
 		<?php 
-			
-			foreach ($empleados as $key => $empleado) {
-				echo "<tr>";
+
+		if(isset($empleados)){
+
+			if(count($empleados) == 0){
+
+				echo "<tr><td colspan='7'>Ningun registro encontrado!!!</td></tr>";
+
+			}else{
+
+				foreach ($empleados as $key => $empleado) {
+					echo "<tr>";
 					foreach ($empleado as $key => $value) {
 						echo "<td>$value</td>";
 					}
 					?>
-						<td>
-							<form action="" method="POST">
-								<input type="hidden" name="nss" value="<?php echo $empleado->nss; ?>">
-								<input type="submit" name="delete" value="Borrar">
-							</form>
-						</td>
-						<td>
-							<form action="?page=wp_empleados_edit" method="post">
-								<input type="hidden" name="nss" value="<?php echo $empleado->nss; ?>">
-								<input type="submit" name="edit" value="Editar">
-							</form>
-						</td>
+					<td>
+						<form action="" method="POST">
+							<input type="hidden" name="nss" value="<?php echo $empleado->nss; ?>">
+							<input type="submit" name="remove" class="danger" value="Borrar">
+						</form>
+					</td>
+					<td>
+						<form action="?page=wp_empleados_edit" method="post">
+							<input type="hidden" name="nss" value="<?php echo $empleado->nss; ?>">
+							<input type="submit" name="edit" class="primary" value="Editar">
+						</form>
+					</td>
 					<?php
-				echo "</tr>";
-			}
+					echo "</tr>";
+				}
+			} 
+		}
 
 		?>
 	</tbody>
 
 </table>
+

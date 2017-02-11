@@ -6,7 +6,7 @@
 	if (isset($validator)){
 		$errors = $validator->getErrors();
 		foreach ($errors as $key => $value) {
-			echo "<div id='wpe_messaje'>$errors[$key]</div>";
+			echo "<div class='alert danger'>$errors[$key]</div>";
 		}
 	}
 
@@ -34,7 +34,7 @@
 		<label>Tarifa Comision</label>
 		<input type="text" name="tarifacomision" value="<?php echo WPE_Input::get('tarifacomision'); ?>">
 
-		<input type="submit" class="inputAction" name="insert" value="Insertar">
+		<input type="submit" class="primary" name="insert" value="Insertar">
 
 	</form>
 

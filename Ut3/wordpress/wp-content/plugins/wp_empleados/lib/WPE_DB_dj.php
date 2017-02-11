@@ -89,6 +89,13 @@ class WPE_DB {
 
 	}
 
+	static function getEmpleados ($nss) {
+
+		global $wpdb;
+		return $wpdb->get_results('SELECT * FROM '.PLUGIN_TABLE_NAME.' WHERE nss like "%'.$nss.'%"');
+
+	}
+
 }
 
 ?>
