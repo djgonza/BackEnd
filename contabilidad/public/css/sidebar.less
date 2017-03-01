@@ -1,0 +1,46 @@
+.sbar {
+	background-color: @primary;
+}
+
+.sbar-element {
+	padding: 1em 0 1em 2.5em;
+	box-sizing: border-box;
+	background-color: @secondary;
+	display: inherit;
+	position: relative;
+	&:hover {
+		background-color: @tertiary;
+		text-decoration: none;
+		& ::before {
+			content: " ";
+			width: 0.3em;
+			background-color: @orange;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	& i {
+		padding-right: 0.6em;
+	}
+}
+
+.sbar-element-head {
+	color: @white;
+	padding: 1rem 0 1rem 2rem;
+}
+
+.sbar-element-active {
+	background-color: @tertiary;
+	color: @white;
+	& ::before {
+		content: " ";
+		width: 0.3em;
+		background-color: @orange;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
